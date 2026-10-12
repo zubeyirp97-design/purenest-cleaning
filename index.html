@@ -365,6 +365,69 @@
         margin: 0 14px 0 0;
       }
     }
+    .why-us {
+  padding: 75px 7%;
+  background: #faf9f5;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  padding: 24px;
+  text-align: center;
+}
+
+.benefit-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #e9eee4;
+  color: #355c43;
+  font-size: 24px;
+}
+
+.benefit-card h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.benefit-card p {
+  margin: 0;
+  color: #69736b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.demo-disclaimer {
+  margin: 28px 0 0;
+  text-align: center;
+  color: #69736b;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .why-us {
+    padding: 55px 6%;
+  }
+
+  .benefit-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .benefit-card {
+    padding: 18px 12px;
+  }
+}
   </style>
 </head>
 
@@ -438,7 +501,40 @@
         </article>
       </div>
     </section>
+    <section class="why-us">
+  <div class="section-heading">
+    <span class="tag">THE PURENEST DIFFERENCE</span>
+    <h2>A little more care goes a long way.</h2>
+    <p>
+      A simple, thoughtful approach to keeping your home
+      clean and comfortable.
+    </p>
+  </div>
 
+  <div class="benefit-grid">
+    <article class="benefit-card">
+      <div class="benefit-icon">✓</div>
+      <h3>Attention to Detail</h3>
+      <p>We focus on the little things that make a space feel fresh.</p>
+    </article>
+
+    <article class="benefit-card">
+      <div class="benefit-icon">♡</div>
+      <h3>Care for Your Home</h3>
+      <p>A considerate approach to your space and everyday routine.</p>
+    </article>
+
+    <article class="benefit-card">
+      <div class="benefit-icon">◷</div>
+      <h3>More Time for You</h3>
+      <p>Spend less time worrying about chores and more time on what matters.</p>
+    </article>
+  </div>
+
+  <p class="demo-disclaimer">
+    Example website copy for a fictional cleaning company.
+  </p>
+    </section>
     <section class="pricing" id="pricing">
       <div class="section-heading">
         <span class="tag">SIMPLE PRICING</span>
