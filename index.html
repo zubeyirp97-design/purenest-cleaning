@@ -1,10 +1,120 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PureNest Cleaning | Demo</title>
+  <meta name="description" content="Discover simple, thoughtful home cleaning services with PureNest Cleaning.">
+  <title>PureNest Cleaning | Website Demo</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #faf9f5;
+      color: #263b2e;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      background: #faf9f5;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #355c43;
+    }
+
+    nav a {
+      color: #263b2e;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover,
+    .service-card a:hover {
+      color: #739478;
+    }
+
+    .demo-note {
+      text-align: center;
+      padding: 12px;
+      background: #e9eee4;
+      font-size: 12px;
+      color: #355c43;
+      letter-spacing: 0.5px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 65px 7%;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .tag {
+      color: #557b5b;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1.08;
+      margin: 20px 0;
+    }
+
+    .hero p {
+      color: #69736b;
+      line-height: 1.8;
+      max-width: 430px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #355c43;
+      color: white;
+      padding: 15px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 18px;
+      transition: background 0.2s;
+    }
+
+    .button:hover,
+    .price-button:hover {
+      background: #52785a;
+    }
+
+    .hero-image {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .hero-image img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      min-height: 300px;
+      object-fit: cover;
+    }
 
     .services,
     .pricing {
@@ -46,6 +156,15 @@
       padding: 26px;
     }
 
+    .service-card {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(38, 59, 46, 0.07);
+    }
+
     .service-icon {
       display: grid;
       place-items: center;
@@ -81,6 +200,8 @@
     .price-card {
       position: relative;
       padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
     }
 
     .price-card.featured {
@@ -106,11 +227,12 @@
       color: #4f5d52;
       line-height: 2.2;
       font-size: 14px;
-      min-height: 125px;
+      flex: 1;
     }
 
     .popular {
       display: inline-block;
+      align-self: flex-start;
       font-size: 10px;
       font-weight: bold;
       letter-spacing: 1px;
@@ -130,6 +252,7 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: bold;
+      transition: background 0.2s;
     }
 
     .price-note {
@@ -139,9 +262,77 @@
       font-size: 12px;
     }
 
+    .contact {
+      padding: 75px 7%;
+      text-align: center;
+      background: #e9eee4;
+    }
+
+    .contact h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      margin: 14px 0;
+    }
+
+    .contact p {
+      color: #69736b;
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .contact .button {
+      margin-top: 24px;
+    }
+
+    footer {
+      padding: 25px 7%;
+      background: #263b2e;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      font-size: 12px;
+    }
+
+    footer p {
+      margin: 0;
+      line-height: 1.7;
+    }
+
     @media (max-width: 700px) {
+      nav {
+        padding: 18px 6%;
+      }
+
+      nav a {
+        margin-left: 12px;
+        font-size: 12px;
+      }
+
+      .logo {
+        font-size: 21px;
+      }
+
+      .hero {
+        flex-direction: column;
+        padding: 40px 6%;
+        align-items: stretch;
+        gap: 28px;
+      }
+
+      .hero-image {
+        width: 100%;
+      }
+
+      .hero-image img {
+        min-height: 230px;
+      }
+
       .services,
-      .pricing {
+      .pricing,
+      .contact {
         padding: 55px 6%;
       }
 
@@ -157,124 +348,21 @@
       .price-card ul {
         min-height: auto;
       }
-    }
-  
-  <style>
-    * {
-      box-sizing: border-box;
+
+      footer {
+        padding: 22px 6%;
+      }
     }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #faf9f5;
-      color: #263b2e;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 7%;
-      background: #faf9f5;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #355c43;
-    }
-
-    nav a {
-      color: #263b2e;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
-
-    .hero {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      padding: 65px 7%;
-    }
-
-    .hero-text {
-      flex: 1;
-    }
-
-    .tag {
-      color: #557b5b;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    h1 {
-      font-size: clamp(38px, 5vw, 64px);
-      line-height: 1.08;
-      margin: 20px 0;
-    }
-
-    .hero p {
-      color: #69736b;
-      line-height: 1.8;
-      max-width: 430px;
-    }
-
-    .button {
-      display: inline-block;
-      background: #355c43;
-      color: white;
-      padding: 15px 22px;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 18px;
-    }
-
-    .hero-image {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .hero-image img {
-      width: 100%;
-      display: block;
-      border-radius: 18px;
-      min-height: 300px;
-      object-fit: cover;
-    }
-
-    .demo-note {
-      text-align: center;
-      padding: 12px;
-      background: #e9eee4;
-      font-size: 12px;
-      color: #355c43;
-    }
-
-    @media (max-width: 650px) {
+    @media (max-width: 360px) {
       nav {
-        padding: 18px 5%;
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
       }
 
       nav a {
-        margin-left: 10px;
-        font-size: 12px;
-      }
-
-      .hero {
-        flex-direction: column;
-        padding: 40px 6%;
-        align-items: stretch;
-      }
-
-      .hero-image {
-        width: 100%;
-      }
-
-      .hero-image img {
-        min-height: 230px;
+        margin: 0 14px 0 0;
       }
     }
   </style>
@@ -282,7 +370,7 @@
 
 <body>
   <div class="demo-note">
-    FICTIONAL BRAND — WEBSITE DEMO PROJECT
+    FICTIONAL BRAND — WEBSITE PORTFOLIO DEMO
   </div>
 
   <nav>
@@ -291,113 +379,133 @@
     <div>
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <main class="hero">
-    <div class="hero-text">
-      <div class="tag">A FRESH START AT HOME</div>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <div class="tag">A FRESH START AT HOME</div>
 
-      <h1>Come home to clean.</h1>
+        <h1>Come home to clean.</h1>
 
-      <p>
-        A cleaner home, a calmer life.
-        Enjoy your free time while we take care
-        of the mess. Simple, reliable home cleaning.
+        <p>
+          A cleaner home, a calmer life.
+          Enjoy your free time while we take care
+          of the mess. Simple, thoughtful home cleaning.
+        </p>
+
+        <a class="button" href="#contact">
+          Get a Free Quote →
+        </a>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80"
+          alt="Bright, clean and modern living room">
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-heading">
+        <span class="tag">WHAT WE DO</span>
+        <h2>A cleaner space, made simple.</h2>
+        <p>Thoughtful cleaning services for every kind of home.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-icon">⌂</div>
+          <h3>Standard Cleaning</h3>
+          <p>Keep your home fresh and tidy with regular cleaning.</p>
+          <a href="#contact">Explore service →</a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">✳</div>
+          <h3>Deep Cleaning</h3>
+          <p>A detailed clean for those places that need extra care.</p>
+          <a href="#contact">Explore service →</a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">⌂</div>
+          <h3>Move-in / Move-out</h3>
+          <p>Start your next chapter with a fresh, clean space.</p>
+          <a href="#contact">Explore service →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="section-heading">
+        <span class="tag">SIMPLE PRICING</span>
+        <h2>Find your perfect clean.</h2>
+        <p>Illustrative prices for this fictional demo brand.</p>
+      </div>
+
+      <div class="price-grid">
+        <article class="price-card">
+          <h3>Basic</h3>
+          <p class="price">$59 <span>/ visit</span></p>
+          <p>Perfect for a quick refresh.</p>
+          <ul>
+            <li>General surface cleaning</li>
+            <li>Kitchen wipe-down</li>
+            <li>Bathroom cleaning</li>
+          </ul>
+          <a class="price-button" href="#contact">Choose Basic</a>
+        </article>
+
+        <article class="price-card featured">
+          <span class="popular">MOST POPULAR</span>
+          <h3>Standard</h3>
+          <p class="price">$99 <span>/ visit</span></p>
+          <p>Our balanced, everyday clean.</p>
+          <ul>
+            <li>Everything in Basic</li>
+            <li>Dusting and vacuuming</li>
+            <li>Bedroom refresh</li>
+          </ul>
+          <a class="price-button" href="#contact">Choose Standard</a>
+        </article>
+
+        <article class="price-card">
+          <h3>Premium</h3>
+          <p class="price">$159 <span>/ visit</span></p>
+          <p>Extra attention to every detail.</p>
+          <ul>
+            <li>Everything in Standard</li>
+            <li>Detailed surface cleaning</li>
+            <li>Extra attention to buildup</li>
+          </ul>
+          <a class="price-button" href="#contact">Choose Premium</a>
+        </article>
+      </div>
+
+      <p class="price-note">
+        Demo pricing only. Final prices would depend on home size and service needs.
       </p>
+    </section>
 
-      <a class="button" href="#contact">
-        Get a Free Quote →
+    <section class="contact" id="contact">
+      <span class="tag">LET'S GET STARTED</span>
+      <h2>Ready for a fresher home?</h2>
+      <p>
+        Tell us what your space needs. This contact section is part
+        of a fictional website demo and does not accept real bookings.
+      </p>
+      <a class="button" href="mailto:hello@example.com?subject=PureNest%20Demo%20Inquiry">
+        Get in Touch →
       </a>
-    </div>
-
-    <div class="hero-image">
-      <img
-        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80"
-        alt="Bright, clean and modern living room">
-    </div>
+    </section>
   </main>
 
-     <section class="services" id="services">
-    <div class="section-heading">
-      <span class="tag">WHAT WE DO</span>
-      <h2>A cleaner space, made simple.</h2>
-      <p>Thoughtful cleaning services for every kind of home.</p>
-    </div>
-
-    <div class="service-grid">
-      <article class="service-card">
-        <div class="service-icon">⌂</div>
-        <h3>Standard Cleaning</h3>
-        <p>Keep your home fresh and tidy with regular cleaning.</p>
-        <a href="#contact">Explore service →</a>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon">✳</div>
-        <h3>Deep Cleaning</h3>
-        <p>A detailed clean for those places that need extra care.</p>
-        <a href="#contact">Explore service →</a>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon">⌂</div>
-        <h3>Move-in / Move-out</h3>
-        <p>Start your next chapter with a fresh, clean space.</p>
-        <a href="#contact">Explore service →</a>
-      </article>
-    </div>
-  </section>
-
-  <section class="pricing" id="pricing">
-    <div class="section-heading">
-      <span class="tag">SIMPLE PRICING</span>
-      <h2>Find your perfect clean.</h2>
-      <p>Illustrative prices for this fictional demo brand.</p>
-    </div>
-
-    <div class="price-grid">
-      <article class="price-card">
-        <h3>Basic</h3>
-        <p class="price">$59 <span>/ visit</span></p>
-        <p>Perfect for a quick refresh.</p>
-        <ul>
-          <li>General surface cleaning</li>
-          <li>Kitchen wipe-down</li>
-          <li>Bathroom cleaning</li>
-        </ul>
-        <a class="price-button" href="#contact">Choose Basic</a>
-      </article>
-
-      <article class="price-card featured">
-        <span class="popular">MOST POPULAR</span>
-        <h3>Standard</h3>
-        <p class="price">$99 <span>/ visit</span></p>
-        <p>Our balanced, everyday clean.</p>
-        <ul>
-          <li>Everything in Basic</li>
-          <li>Dusting and vacuuming</li>
-          <li>Bedroom refresh</li>
-        </ul>
-        <a class="price-button" href="#contact">Choose Standard</a>
-      </article>
-
-      <article class="price-card">
-        <h3>Premium</h3>
-        <p class="price">$159 <span>/ visit</span></p>
-        <p>Extra attention to every detail.</p>
-        <ul>
-          <li>Everything in Standard</li>
-          <li>Detailed surface cleaning</li>
-          <li>Extra attention to buildup</li>
-        </ul>
-        <a class="price-button" href="#contact">Choose Premium</a>
-      </article>
-    </div>
-
-    <p class="price-note">
-      Demo pricing only. Final prices would depend on home size and service needs.
-    </p>
-  </section>
-</body> 
+  <footer>
+    <p>✳ PureNest Cleaning</p>
+    <p>Fictional brand created for a web design portfolio demo.</p>
+  </footer>
+</body>
 </html>
